@@ -1,9 +1,9 @@
-import { useNavigation } from "@react-navigation/native";
-import { Button, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import { styles } from "../../assets/global";
 
 export const HomeScreen=()=>{
     return (
-        <View style={{flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+        <View style={styles.screenContainer}>
             <Text>Home Page</Text>
         </View>
     )

@@ -1,23 +1,26 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-    container:{
+    screenContainer:{
         flex: 1,
-        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
     },
     tabsContainer: {
+        marginTop: 25,
         padding: 20,
-        backgroundColor: '#E0E0E0',
         flexDirection: 'row',
         gap: 20,
     },
     tabItem: {
         fontSize: 20,
+        padding: 10,
     },
     activeTabItem: {
-        backgroundColor: 'blue',
+        borderBottomColor: '#82C8E5',
+        borderBottomWidth: 2,
+        fontWeight: 500,
         fontSize: 20,
+        padding: 10,
     },
 });

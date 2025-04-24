@@ -28,6 +28,7 @@ import { styles } from './src/assets/global';
 import { HomeScreen } from './src/components/screens/HomeScreen';
 import { ProfileScreen } from './src/components/screens/ProfileScreen';
 import { allRoutes } from './src/routes/routes';
+import { Header } from './src/components/screens/header/Header';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -43,10 +44,11 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaProvider>
       <NavigationContainer >
-        <Stack.Navigator initialRouteName="Home" >
+        <Header/>
+        <Stack.Navigator initialRouteName="Home" screenOptions={{animation: 'fade_from_bottom', headerShown: false, statusBarStyle: "dark"}}>
           {
             allRoutes?.map((screen, index)=>(
-              <Stack.Screen name={screen?.name} component={screen.component} key={index}/>
+              <Stack.Screen name={screen?.name} component={screen?.component} key={index} />
             ))
           }
         </Stack.Navigator>
