@@ -28,30 +28,20 @@ import { styles } from './src/assets/global';
 import { HomeScreen } from './src/components/screens/HomeScreen';
 import { ProfileScreen } from './src/components/screens/ProfileScreen';
 import { allRoutes } from './src/routes/routes';
-import { Header } from './src/components/screens/header/Header';
+import { Header } from './src/components/header/Header';
+import { StackNavigator } from './src/navigations/Stack';
+import { TabNavigator } from './src/navigations/Tab';
+
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  const safePadding = '5%';
-  const Stack = createNativeStackNavigator();
 
-  const backgroundStyle = {
-    backgroundColor: Colors.lighter,
-    paddingTop: safePadding,
-    paddingBottom: safePadding,
-  };
 
   return (
     <SafeAreaProvider>
       <NavigationContainer >
-        <Header/>
-        <Stack.Navigator initialRouteName="Home" screenOptions={{animation: 'fade_from_bottom', headerShown: false, statusBarStyle: "dark"}}>
-          {
-            allRoutes?.map((screen, index)=>(
-              <Stack.Screen name={screen?.name} component={screen?.component} key={index} />
-            ))
-          }
-        </Stack.Navigator>
+        {/* <Header />
+        <StackNavigator /> */}
+        <TabNavigator/>
       </NavigationContainer>
     </SafeAreaProvider>
   );

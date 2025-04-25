@@ -1,13 +1,17 @@
-import { HomeScreen } from "../components/screens/HomeScreen";
-import { ProfileScreen } from "../components/screens/ProfileScreen";
+import { HomeScreen } from '../components/screens/HomeScreen';
+import { ProfileScreen } from '../components/screens/ProfileScreen';
 
+export enum routeNames {
+        HOME = 'Home',
+        Profile = 'Profile'
+}
 export const allRoutes = [
     {
-        name: "Home",
-        component: HomeScreen
+        name: routeNames.HOME,
+        component: HomeScreen,
     },
     {
-        name: "Profile",
-        component: ProfileScreen
-    }
-]
+        name: routeNames.Profile,
+        component: ProfileScreen,
+    },
+];
