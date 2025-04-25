@@ -21,14 +21,14 @@ import { DrawerNavigator } from 'src/navigations/Drawer';
 
 function App(): React.JSX.Element {
   return (
-    // <SafeAreaProvider>
+    <SafeAreaProvider>
       <NavigationContainer >
         {/* <Header/> */}
         {/* <StackNavigator/> */}
         {/* <TabNavigator/> */}
-        <DrawerNavigator/>
+        <DrawerNavigator />
       </NavigationContainer>
-    // </SafeAreaProvider>
+    </SafeAreaProvider>
   );
 }
 
