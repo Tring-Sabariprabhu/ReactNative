@@ -14,17 +14,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Header } from 'src/components/header/Header';
 import { StackNavigator } from 'src/navigations/Stack';
 import { TabNavigator } from 'src/navigations/Tab';
+import { DrawerNavigator } from 'src/navigations/Drawer';
+
+
 
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaProvider>
+    // <SafeAreaProvider>
       <NavigationContainer >
-        {/* <Header />
-        <StackNavigator /> */}
-        <TabNavigator/>
+        {/* <Header/> */}
+        {/* <StackNavigator/> */}
+        {/* <TabNavigator/> */}
+        <DrawerNavigator/>
       </NavigationContainer>
-    </SafeAreaProvider>
+    // </SafeAreaProvider>
   );
 }
 
